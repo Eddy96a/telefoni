@@ -204,3 +204,28 @@ select option.in-lavorazione {
     text-decoration: none;
     color: black;
 }
+
+.contatti-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.contatti-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 6px 14px;
+    font-size: 12px;
+    background-color: #118266;
+    border-radius: 40px;
+    margin: 10px;
+    width: 170px;
+}
+.contatti-item a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
