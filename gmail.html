@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8b83982672.js" crossorigin="anonymous"></script>
+    <title>Gamil</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-bar">
+            <div class="side-bar-incon">
+                <i class="fa-solid fa-bars bar-icons"></i>
+            </div>
+            <div class="side-bar-incon">
+                <i class="fa-solid fa-envelope bar-icons"></i>
+            </div>
+            <div class="side-bar-incon">
+                <i class="fa-solid fa-star bar-icons"></i>
+            </div>
+            <div class="side-bar-incon">
+                <i class="fa-regular fa-clock bar-icons"></i>
+            </div>
+            <div class="side-bar-incon">
+                <i class="fa-solid fa-envelope-circle-check bar-icons"></i>
+            </div>
+            <div class="side-bar-incon">
+            </div>
+            <div class="side-bar-incon">
+            </div>
+            <div class="side-bar-incon">
+            </div>
+        </div>
+        <div class="main-bar">
+            <div class="barra-superiore">
+                <div class="barra-centrale">
+                    <div>
+                        <img src="logo_gmail_lockup_default_1x_r5.png">
+                    </div>
+                    <div class="cercatore">
+                        <div >
+                            <i class="fa-solid fa-magnifying-glass ter"></i>
+                        </div>
+                        <div>
+                            <input id="cercaID" class="nostrasearchbar" type="search" placeholder="Search .." onkeydown="if(event.keyCode == 13) cerca()">
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-sliders ter"></i>
+                        </div>
+                    </div>
+                    <div class="attivo">
+                        <div class="pallino">     
+
+                        </div>
+                        <div>
+                            Active
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-angle-down ter2"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gruppo">
+                        <div class="gruppoicone">
+                            <div class="centered pas">
+                                <i class="fa-solid fa-circle-info gi"></i>
+                            </div>
+                            <div class="centered pas">
+                                <i class="fa-solid fa-gear gi"></i>
+                            </div>
+                            <div class="centered pas">
+                                <i class="fa-solid fa-grip gi"></i>
+                            </div>
+                        </div>
+                        <div class="avatar">
+                            <img src="image.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="pop">
+                    <div>
+                        automatic
+                    </div>
+                    <div>
+                        do not disturb
+                    </div>
+                    <div class="pop-item">
+                        <div class="pop-icon">
+                            <i class="fa-regular fa-circle gi2"></i>
+                        </div>
+                        <div class="pop-text">
+                            <p>Set as away</p>
+                        </div>
+                        <div class="pop-icon">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="pop-item">
+                        <div class="pop-icon">
+                            <i class="fa-solid fa-pen gi2"></i>
+                        </div>
+                        <div class="pop-text">
+                            <p>Add a status</p>
+                        </div>
+                        <div class="pop-icon">
+                            
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="pop-item">
+                        <div class="pop-icon">
+
+                        </div>
+                        <div class="pop-text">
+                            <p>chat nottification settings</p>
+                        </div>
+                        <div class="pop-icon">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="panello">
+                    <div class="singolaemail">
+                        <div class="titoloemail">
+                            Zendrop
+                        </div>
+                        <p class="sottotitolo">Tip Futuro, Avoid These Traps..</p>
+                    </div>
+                    <div class="singolaemail">
+                        <div class="titoloemail">
+                            casa
+                        </div>
+                        <p class="sottotitolo">Tip Futuro, Avoid These Traps..</p>
+                    </div>
+                    <div class="singolaemail">
+                        <div class="titoloemail">
+                            casa, bella ecc
+                        </div>
+                        <p class="sottotitolo">Tip Futuro, Avoid These Traps..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function cerca(){
+        var message = document.getElementById("cercaID").value;
+        //alert("Sto cercando: "+message)
+        var googleSearch = "https://www.google.it/search?q="+encodeURIComponent(message);
+        window.open(googleSearch, "_blank");
+
+    }
+</script>
+
+</html>

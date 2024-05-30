@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8b83982672.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="grafica.css">
+    <title>Lista Ordini</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="menu-item">
+                <img class="logo" src="logo.png">
+                <h4>Riparamobile</h4>
+            </div>
+            <div class="horizontal-hr">
+                <hr>
+            </div>
+            
+            <div class="menu-item base" >
+                <i class="fa-solid fa-mobile ter"></i>
+                <h6> <a href="telefoni.html" class="menu-ling">telefoni da riparare</a></h6>
+
+            </div>
+            <div class="menu-item base selected">
+                <i class="fa-solid fa-list gta"></i>
+                <h6>lista ordini</h6>
+            </div>
+            <div class="menu-item base">
+                <i class="fa-solid fa-address-book aoi"></i>
+                <h6> <a href="cotatti.html" class="menu-ling">contatti</a></h6>
+            </div>
+            <div class="space">
+                <div class="menu-item base boh">
+                    <i class="fa-solid fa-right-from-bracket "></i>
+                <h6><a class="logout" href="login.html">Logout</a></h6>
+            </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="hbello">
+                <h3>Lista Ordini</h3>
+            </div>
+            <div class="containerinterno">
+                <div class="barrasuperiore">
+                    <h5>Modello</h5>
+                    <div class="space"></div>
+                    <h5>Problema</h5>
+                    <div class="space"></div>
+                    <h5>Stato di Lavorazione</h5>
+                </div>
+                <div class="test riga1">
+                    <div class="elemanto-modello">
+                        Nokia X
+                    </div>
+                    <div class="elemanto-problema">
+                        Schermo rotto
+                    </div>
+                    <select name="Stato" id="r1">
+                        <option value="da-lavorare">Da Lavorare</option>
+                        <option value="in-lavorazione" selected>In lavorazione</option>
+                        <option value="lavoro-finito">Lavoro Finito</option>
+                    </select>
+                </div>
+                <div class="test riga2">
+                    <div class="elemanto-modello">
+                        Samsung 21
+                    </div>
+                    <div class="elemanto-problema">
+                        Non si accende
+                    </div>
+                    <select name="Stato" id="r2">
+                        <option value="da-lavorare">Da Lavorare</option>
+                        <option value="in-lavorazione">In lavorazione</option>
+                        <option value="lavoro-finito" selected>Lavoro Finito</option>
+                    </select>
+                </div>
+                <div class="test riga1">
+                    <div class="elemanto-modello">
+                        Redmi N 7
+                    </div>
+                    <div class="elemanto-problema">
+                        Da formattare
+                    </div>
+                    <select name="Stato" id="r3">
+                        <option value="da-lavorare" selected>Da Lavorare</option>
+                        <option value="in-lavorazione">In lavorazione</option>
+                        <option value="lavoro-finito">Lavoro Finito</option>
+                    </select>
+                </div>
+                <div class="test riga2">
+                    <div class="elemanto-modello">
+                        Nokia Y
+                    </div>
+                    <div class="elemanto-problema">
+                        Non si spegne
+                    </div>
+                    <select name="Stato" id="r4">
+                        <option value="da-lavorare">Da Lavorare</option>
+                        <option value="in-lavorazione">In lavorazione</option>
+                        <option value="lavoro-finito" selected>Lavoro Finito</option>
+                    </select>
+                </div>
+                <div class="test riga1">
+                    <div class="elemanto-modello">
+                        Iphone 12
+                    </div>
+                    <div class="elemanto-problema">
+                        Da formattare
+                    </div>
+                    <select name="Stato" id="r5">
+                        <option value="da-lavorare">Da Lavorare</option>
+                        <option value="in-lavorazione" selected>In lavorazione</option>
+                        <option value="lavoro-finito">Lavoro Finito</option>
+                    </select>
+                </div>
+                <div class="test riga2">
+                    <div class="elemanto-modello">
+                        Oppo N
+                    </div>
+                    <div class="elemanto-problema">
+                        Schermo nero
+                    </div>
+                    <select name="Stato" id="r6">
+                        <option value="da-lavorare">Da Lavorare</option>
+                        <option value="in-lavorazione">In lavorazione</option>
+                        <option value="lavoro-finito" selected>Lavoro Finito</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function cambiaColore(selectElement) {
+        const selectedValue=selectElement.value;
+        selectElement.classList.remove('da-lavorare','in-lavorazione','lavoro-finito');
+        switch (selectedValue) {
+            case 'da-lavorare':
+                selectElement.classList.add('da-lavorare');
+                break;
+            case 'in-lavorazione':
+                selectElement.classList.add('in-lavorazione');
+                break;
+            case 'lavoro-finito':
+                selectElement.classList.add('lavoro-finito');
+                break;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        
+    const comboboxes = document.querySelectorAll('select');
+        console.log(comboboxes.length)
+    comboboxes.forEach(selectElement => {
+        // Imposta il colore di sfondo iniziale
+        cambiaColore(selectElement);
+
+        // Aggiungi l'evento onchange
+        selectElement.addEventListener('change', function() {
+            cambiaColore(selectElement);
+            
+        });
+    });
+});
+</script>
+</html>

@@ -1,0 +1,206 @@
+body {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(42, 165, 89);
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.horizontal-hr{
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 48px;
+    margin-right: 6px;
+}
+
+.menu-item {
+    display: flex;
+    padding: 6px;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.base {
+
+}
+
+.menu-item:hover {
+    background-color: rgba(10, 83, 23, 0.779);
+    cursor: pointer;
+    border-radius: 17px;
+    padding: 6px;
+}
+
+
+.gta {
+    margin-right: 20px;
+    color: rgb(245, 169, 27);
+}
+
+.ter {
+    margin-right: 20px;
+    color: rgb(245, 169, 27);
+}
+
+.aoi {
+    margin-right: 20px;
+    color: rgb(245, 169, 27);
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.space {
+    flex-grow: 1; 
+    display: flex;
+    align-items: end;
+}
+
+i {
+    margin-right: 10px;
+    color: rgb(0, 21, 255);
+}
+
+.boh {
+    width: 100%;
+}
+
+.containerinterno {
+    height: 500px;
+    width: 350px;
+    background-color: #18AC88;
+}
+
+.barrasuperiore {
+    display: flex;
+    background-color: #18AC88;
+    padding: 4px;
+}
+
+h4 {
+    margin: 10px;
+    padding: 0;
+}
+
+.test {
+    display: flex;
+    background-color: #cccfcd;
+    padding: 4px;
+}
+
+h5 {
+    margin: 0;
+    margin-right: 30px;
+    margin-left: 10px;  
+}
+
+.elemanto-modello {
+    width: 90px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.elemanto-problema {
+    width: 120px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+.riga1 {
+    background-color: rgb(167, 220, 183);
+}
+
+.riga2 {
+    background-color: rgb(147, 200, 163);
+}
+
+select {
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 18px;
+    padding: 1px 5px;
+    border: none;
+}
+
+select.da-lavorare {
+    background-color: red;
+}
+
+select.lavoro-finito {
+    background-color: green;
+}
+
+select.in-lavorazione {
+    background-color: chocolate;
+}
+
+select option.da-lavorare {
+    background-color: red;
+}
+
+select option.lavoro-finito {
+    background-color: green;
+}
+
+select option.in-lavorazione {
+    background-color: chocolate;
+}
+
+.logout {
+    text-decoration: none;
+    color: black;
+}
+
+.hbello {
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    border-radius: 15px !important;
+    background-color: rgb(65, 122, 61) !important;
+    padding: 6px;
+}
+
+.menu-ling {
+    text-decoration: none;
+    color: black;
+}

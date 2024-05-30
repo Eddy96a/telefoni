@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8b83982672.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        width: 0;   
+    }
+
+    .container {
+        width: 300px;
+        height: 240px;
+        background-color: rgb(34, 34, 37);
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        
+    }
+
+    .sfondo {
+        height: 100vh;
+        width: 100vh;
+        background: linear-gradient(120deg, #01170b, #01170b,#01200f,#011b0c);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lognipersona {
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(14, 55, 28);
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    h3 {
+        padding: 0;
+        margin: 0;
+        color: wheat;
+    }
+
+    .big{
+        font-size: 36px;
+        margin-bottom: 4px;
+        color: wheat;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 2px;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 10px;
+    }
+
+    input[type="submit"] {
+        width: 210px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: 7px;
+        margin-bottom: 2px;
+        padding: 0;
+        color:white;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .row{
+        width: 210px;
+        margin-top: 4px;
+    }
+
+
+</style>
+<body>
+    <div class="sfondo">
+        <div class="container">
+            <div class="lognipersona">
+                <i class="fa-solid fa-user big"></i>
+                <h3>User Login</h3>
+            </div>
+            <form id="login">
+                <div class="row">
+                    <p class="label">USERNAME</p>
+                    <input type="text" id="username" name="username" placeholder="Inserisci il tuo username" required>    
+                </div>
+
+                <div class="row">
+                    <p class="label">PASSWORD</p>
+                    <input type="password" id="password" name="password" placeholder="Inserisci la tua password" required>
+                </div>
+                
+                
+                
+                
+                <br>
+                
+                <input type="submit" value="Login">
+            </form>
+             
+        </div>
+    </div>
+</body>
+<script>
+
+        document.getElementById('login').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impedisce l'invio del form
+
+    // Simulazione di autenticazione (da sostituire con la logica reale)
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Simulazione di autenticazione
+    if (username === 'eddy' && password === '1234') {
+        // Reindirizza alla pagina telefoni.html
+        window.location.href = './telefoni.html';
+    } else {
+        alert('Credenziali non valide. Riprova.');
+    }
+});
+</script>
+</html>
