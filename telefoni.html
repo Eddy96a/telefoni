@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="grafica.css">
     <title>Telefoni</title>
 </head>
+
 <body>
     <div class="container">
         <div class="menu">
@@ -17,25 +19,29 @@
             <div class="horizontal-hr">
                 <hr>
             </div>
-            
-            <div class="menu-item base selected" >
+
+            <div class="menu-item base selected">
                 <i class="fa-solid fa-mobile ter"></i>
                 <h6>telefoni da riparare</h6>
 
             </div>
-            <div class="menu-item base">
-                <i class="fa-solid fa-list gta"></i>
-                <h6><a href="lista.html" class="menu-ling">lista ordini</a></h6>
-            </div>
-            <div class="menu-item base">
-                <i class="fa-solid fa-address-book aoi"></i>
-                <h6> <a href="cotatti.html" class="menu-ling">contatti</a></h6>
-            </div>
+            <a href="lista.html" class="menu-ling">
+                <div class="menu-item base">
+                    <i class="fa-solid fa-list gta"></i>
+                    <h6>lista ordini</h6>
+                </div>
+            </a>
+            <a href="cotatti.html" class="menu-ling">
+                <div class="menu-item base">
+                    <i class="fa-solid fa-address-book aoi"></i>
+                    <h6> contatti</h6>
+                </div>
+            </a>
             <div class="space">
                 <div class="menu-item base boh">
                     <i class="fa-solid fa-right-from-bracket "></i>
-                <h6><a class="logout" href="login.html">Logout</a></h6>
-            </div>
+                    <h6><a class="logout" href="login.html">Logout</a></h6>
+                </div>
             </div>
         </div>
 
@@ -135,8 +141,8 @@
 </body>
 <script>
     function cambiaColore(selectElement) {
-        const selectedValue=selectElement.value;
-        selectElement.classList.remove('da-lavorare','in-lavorazione','lavoro-finito');
+        const selectedValue = selectElement.value;
+        selectElement.classList.remove('da-lavorare', 'in-lavorazione', 'lavoro-finito');
         switch (selectedValue) {
             case 'da-lavorare':
                 selectElement.classList.add('da-lavorare');
@@ -150,20 +156,21 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        
-    const comboboxes = document.querySelectorAll('select');
-        console.log(comboboxes.length)
-    comboboxes.forEach(selectElement => {
-        // Imposta il colore di sfondo iniziale
-        cambiaColore(selectElement);
+    document.addEventListener('DOMContentLoaded', function () {
 
-        // Aggiungi l'evento onchange
-        selectElement.addEventListener('change', function() {
+        const comboboxes = document.querySelectorAll('select');
+        console.log(comboboxes.length)
+        comboboxes.forEach(selectElement => {
+            // Imposta il colore di sfondo iniziale
             cambiaColore(selectElement);
-            
+
+            // Aggiungi l'evento onchange
+            selectElement.addEventListener('change', function () {
+                cambiaColore(selectElement);
+
+            });
         });
     });
-});
 </script>
+
 </html>
